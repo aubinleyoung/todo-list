@@ -7,67 +7,62 @@
   text-align: center;
   background: rgba(128, 128, 128, 0.308);
   width: 50%;
-  height: fit-content;
   margin: auto;
   padding: 10px;
 }
-.todo-title{
+
+.todo-title {
   font-size: 60px;
   color: gray;
 }
-.App-body{
 
-  height: fit-content;
+.App-body {
   width: 100%;
 }
-.App-input{
 
+.App-input {
   width: 20rem;
   margin: auto;
 }
 
-
-#task{
+#task {
   width: 80%;
   height: 88%;
   border: unset;
   outline: unset;
-
   border-radius: 15px;
-
 }
-.list{
+
+.list {
   list-style: none;
 }
-#form{
+
+#form {
   width: 100%;
   display: flex;
   justify-content: space-between;
   height: 2rem;
-  background:white;
+  background: white;
   margin: auto;
   border-radius: 15px;
-
 }
-.task-list{
+
+.task-list {
   width: 100%;
   height: 2rem;
   background: #f0efef;
   justify-content: space-between;
-
-
   margin: auto;
-
-
 }
-.list-container{
+
+.list-container {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-left: 0px;
+  padding-left: 0;
 }
-button{
+
+button {
   border: unset;
   background: unset;
 }
-
