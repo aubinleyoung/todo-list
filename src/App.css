@@ -1,12 +1,54 @@
+
 .App {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
   text-align: center;
-}
-input{
-  width:auto ;
-}
-.items-container{
-  width: 50%;
-  height: auto;
   background: gray;
+  width: 50%;
+  height: fit-content;
+  margin: auto;
+  padding: 10px;
+}
+
+.App-body{
+
+  height: fit-content;
+  width: 100%;
+}
+.App-input{
+
+  width: 20rem;
   margin: auto;
 }
+
+
+#task{
+  width: 80%;
+  height: 88%;
+
+}
+#form{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+  background: rgb(76, 33, 33);
+  margin: auto;
+}
+.task-list{
+  width: 100%;
+  height: 2rem;
+  background: white;
+  justify-content: space-between;
+
+  margin: auto;
+
+
+}
+.list-container{
+
+  padding-left: 0px;
+}
+
