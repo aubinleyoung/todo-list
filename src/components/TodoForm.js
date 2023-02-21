@@ -21,6 +21,9 @@ function TodoForm({ addTodo }) {
       // reset task input
       setTodo({ ...todo, task: '' });
     }
+    else{
+      alert('Please add item')
+    }
   }
   return (
     <form action="" onSubmit={handleSubmit} id="form">
