@@ -28,7 +28,7 @@ function TodoForm({ addTodo }) {
   return (
     <form action="" onSubmit={handleSubmit} id="form">
 
-      <input type="text" name="task" id="task" value={todo.task} onChange={handleTaskInputChange} />
+      <input type="text" name="task" id="task" value={todo.task}  placeholder="Add todo..." onChange={handleTaskInputChange} />
       <button type="submit">
 
         <FaPlusCircle className="input-submit" />
