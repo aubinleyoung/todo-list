@@ -28,6 +28,10 @@
   width: 80%;
   height: 88%;
 
+
+}
+.list{
+  list-style: none;
 }
 #form{
   width: 100%;
@@ -36,6 +40,7 @@
   height: 2rem;
   background: rgb(76, 33, 33);
   margin: auto;
+
 }
 .task-list{
   width: 100%;

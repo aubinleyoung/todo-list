@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 import '../App.css';
 
 function TodoForm({ addTodo }) {
@@ -14,7 +15,7 @@ function TodoForm({ addTodo }) {
   function handleSubmit(e) {
     e.preventDefault();
     if (todo.task) {
-      addTodo({ ...todo, id: '' });
+      addTodo({ ...todo, id: uuidv4() });
       // reset task input
       setTodo({ ...todo, task: '' });
     }

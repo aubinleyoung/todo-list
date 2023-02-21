@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Todo from './Todo';
 import '../App.css';
 
-const TodosList = ({ todos }) => (
+const TodosList = ({ todos, toggleComplete, removeTodo }) => (
   <ul className="list-container">
     {todos.map((todo) => (
-      <Todo key={todo.id} todo={todo} />
+      <Todo key={todo.id} todo={todo} toggleComplete={toggleComplete} removeTodo={removeTodo} />
     ))}
   </ul>
 );
@@ -18,6 +18,8 @@ TodosList.propTypes = {
       completed: PropTypes.bool,
     }),
   ).isRequired,
+  toggleComplete: PropTypes.func.isRequired,
+  removeTodo: PropTypes.func.isRequired,
 
 };
 
