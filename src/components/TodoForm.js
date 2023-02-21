@@ -1,4 +1,5 @@
-/*eslint-disable*/
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-alert */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
@@ -20,15 +21,14 @@ function TodoForm({ addTodo }) {
       addTodo({ ...todo, id: uuidv4() });
       // reset task input
       setTodo({ ...todo, task: '' });
-    }
-    else{
-      alert('Please add item')
+    } else {
+      alert('Please add item');
     }
   }
   return (
     <form action="" onSubmit={handleSubmit} id="form">
 
-      <input type="text" name="task" id="task" value={todo.task}  placeholder="Add todo..." onChange={handleTaskInputChange} />
+      <input type="text" name="task" id="task" value={todo.task} placeholder="Add todo..." onChange={handleTaskInputChange} />
       <button type="submit">
 
         <FaPlusCircle className="input-submit" />
