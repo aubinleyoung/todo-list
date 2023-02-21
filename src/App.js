@@ -1,27 +1,26 @@
-// /*eslint-disable*/
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import TodoForm from './components/TodoForm';
 import TodosList from './components/TodoList';
 
-const LOCAL_STORAGE_KEY = 'react-todo-list-todos';
 function App() {
-  const [todos, setTodos] = useState([]);
+  function getInitialTodos() {
+    // getting stored items
+    const temp = localStorage.getItem('todos');
+    const savedTodos = JSON.parse(temp);
+    return savedTodos || [];
+  }
+  const [todos, setTodos] = useState(getInitialTodos());
+  // storing todos items
   useEffect(() => {
-    const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    if (storageTodos) {
-      setTodos(storageTodos);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
+    const temp = JSON.stringify(todos);
+    localStorage.setItem('todos', temp);
   }, [todos]);
-
+  // Add todo
   const addTodo = (todo) => {
     setTodos([todo, ...todos]);
   };
-
+  // Completed
   const toggleComplete = (id) => {
     setTodos(
       todos.map((todo) => {
@@ -35,13 +34,14 @@ function App() {
 
     );
   };
+  // Remove todo
   const removeTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Todos</h1>
+        <h1 className="todo-title">Todos</h1>
 
       </header>
       <section className="App-body">

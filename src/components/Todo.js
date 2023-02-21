@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTrash } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 function Todo({ todo, toggleComplete, removeTodo }) {
@@ -18,7 +19,11 @@ function Todo({ todo, toggleComplete, removeTodo }) {
     <div className="task-list" style={{ display: 'flex' }}>
       <input type="checkbox" onClick={handleCheckboxClick} />
       <li className="list" style={todo.completed ? completedStyle : null}>{todo.task}</li>
-      <button type="submit" onClick={handleRemoveCick}>X</button>
+      <button className="input-submit" type="submit" onClick={handleRemoveCick}>
+
+        <FaTrash style={{ color: 'gray', fontSize: '16px' }} />
+      </button>
+
     </div>
   );
 }

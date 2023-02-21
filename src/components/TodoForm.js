@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import { FaPlusCircle } from 'react-icons/fa';
 import '../App.css';
 
 function TodoForm({ addTodo }) {
@@ -24,7 +25,10 @@ function TodoForm({ addTodo }) {
     <form action="" onSubmit={handleSubmit} id="form">
 
       <input type="text" name="task" id="task" value={todo.task} onChange={handleTaskInputChange} />
-      <button type="submit">submit</button>
+      <button type="submit">
+
+        <FaPlusCircle className="input-submit" />
+      </button>
     </form>
   );
 }
