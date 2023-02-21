@@ -2,7 +2,7 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="" alt="project view" width="auto"  height="auto" />
+  <img src="./assets/images/view.jpg" alt="project view" width="auto"  height="auto" />
   <br/>
 
   <h3><b>Todo List</b></h3>
