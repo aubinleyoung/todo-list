@@ -1,3 +1,6 @@
+body {
+  background: rgba(128, 128, 128, 0.751);
+}
 
 .App {
   position: absolute;
@@ -6,28 +9,30 @@
   right: 0;
   text-align: center;
   background: rgba(128, 128, 128, 0.308);
-  width: 50%;
+  width: 80%;
   margin: auto;
   padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 1px 1px;
 }
 
 .todo-title {
   font-size: 60px;
-  color: gray;
+  color: rgb(86, 85, 85);
 }
 
 .App-body {
-  width: 100%;
+  width: 70%;
+  margin: auto;
 }
 
 .App-input {
-  width: 20rem;
+  width: 100%;
   margin: auto;
 }
 
 #task {
   width: 80%;
-  height: 88%;
   border: unset;
   outline: unset;
   border-radius: 15px;
@@ -41,15 +46,15 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 2rem;
   background: white;
   margin: auto;
   border-radius: 15px;
+  height: 3rem;
 }
 
 .task-list {
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   background: #f0efef;
   justify-content: space-between;
   margin: auto;
