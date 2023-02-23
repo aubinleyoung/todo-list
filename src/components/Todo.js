@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { FaTrash } from 'react-icons/fa';
 import PropTypes from 'prop-types';
